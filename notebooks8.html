@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Naive Bayes Clasifier (Tugas 4) &#8212; Fathony Syaennulloh</title>
+    <title>IMPLEMENTASI REGRESI LINEAR &#8212; Fathony Syaennulloh</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,12 +50,9 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="K-Means (Tugas 5)" href="notebooks4.html" />
-    <link rel="prev" title="K-NN (Tugas 3)" href="notebooks2.html" />
+    <link rel="prev" title="KLASIFIKASI DATA DIABETIC RETINOPATHY" href="notebooks7.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -126,8 +123,8 @@ const thebe_selector_output = ".output, .cell_output"
    K-NN (Tugas 3)
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks3.html">
    Naive Bayes Clasifier (Tugas 4)
   </a>
  </li>
@@ -139,6 +136,20 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="notebooks5.html">
    UTS Data Mining
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks7.html">
+   <strong>
+    KLASIFIKASI DATA DIABETIC RETINOPATHY
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   <strong>
+    IMPLEMENTASI REGRESI LINEAR
+   </strong>
   </a>
  </li>
 </ul>
@@ -200,7 +211,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/notebooks3.ipynb"
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/notebooks8.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -260,7 +271,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks3.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks8.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -288,7 +299,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/notebooks3.ipynb"
+        <a href="_sources/notebooks8.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -337,7 +348,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Naive Bayes Clasifier (Tugas 4)</h1>
+                <h1>IMPLEMENTASI REGRESI LINEAR</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -349,55 +360,33 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="naive-bayes-clasifier-tugas-4">
-<h1>Naive Bayes Clasifier (Tugas 4)<a class="headerlink" href="#naive-bayes-clasifier-tugas-4" title="Permalink to this headline">#</a></h1>
-<p>##Algoritma Naive Bayes Clasifier</p>
-<p>Naïve Bayes Clasifier atau disebut juga dengan
-Bayesian Classification merupakan metode
-pengklasifikasian statistik yang didasarkan pada
-teorema bayes yang dapat digunakan untuk
-memprediksi probabilitas keanggotaan suatu kelas.
-Bayesian Classification terbukti memiliki akurasi dan
-kecepatan yang tinggi saat diaplikasikan ke dalam
-database yang besar.</p>
-<p>Bentuk umum teorema bayes adalah sebagai
-berikut:</p>
-<div class="math notranslate nohighlight">
-\[
-   P(H|X)\frac{P( X | H) P (H)}{P(X)}
-\]</div>
-<p>Dimana :</p>
-<p><strong>X</strong> = data kelas yang belum diketahui</p>
-<p><strong>H</strong> = Hipotesa data X merupakan suatu kelas spesifik</p>
-<p><strong>P(H|X)</strong> = Probabilitas hipotesis H berdasarkan kondisi X (Posterior Probability)</p>
-<p><strong>P(H)</strong> = Probabilitas hipotesis H (prior probability)</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="implementasi-regresi-linear">
+<h1><strong>IMPLEMENTASI REGRESI LINEAR</strong><a class="headerlink" href="#implementasi-regresi-linear" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_regression</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span>
+<span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">make_regression</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">n_features</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">noise</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
-</div>
-<p>Import Datset</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://gist.githubusercontent.com/netj/8836201/raw/6f9306ad21398ea43cba4f7d537619d0e07d5ae3/iris.csv&#39;</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-</pre></div>
-</div>
+<div class="cell_output docutils container">
+<img alt="_images/notebooks8_1_0.png" src="_images/notebooks8_1_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="n">df</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-4e542367-4bd8-4c1a-a1d2-df9decb282ef">
+  <div id="df-d70d0cfd-52bb-4a3e-bfeb-3c01aa67e6c7">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -417,58 +406,94 @@ berikut:</p>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>sepal.length</th>
-      <th>sepal.width</th>
-      <th>petal.length</th>
-      <th>petal.width</th>
-      <th>variety</th>
+      <th>0</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>5.1</td>
-      <td>3.5</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>Setosa</td>
+      <th>-0.035081</th>
+      <td>0.021259</td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>4.9</td>
-      <td>3.0</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>Setosa</td>
+      <th>56.531084</th>
+      <td>1.188684</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>4.7</td>
-      <td>3.2</td>
-      <td>1.3</td>
-      <td>0.2</td>
-      <td>Setosa</td>
+      <th>-95.555220</th>
+      <td>-2.657263</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>4.6</td>
-      <td>3.1</td>
-      <td>1.5</td>
-      <td>0.2</td>
-      <td>Setosa</td>
+      <th>18.869210</th>
+      <td>0.189144</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>5.0</td>
-      <td>3.6</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>Setosa</td>
+      <th>16.459358</th>
+      <td>0.336643</td>
+    </tr>
+    <tr>
+      <th>7.015841</th>
+      <td>0.168382</td>
+    </tr>
+    <tr>
+      <th>0.390948</th>
+      <td>-0.135391</td>
+    </tr>
+    <tr>
+      <th>25.234557</th>
+      <td>0.598243</td>
+    </tr>
+    <tr>
+      <th>5.416993</th>
+      <td>0.080002</td>
+    </tr>
+    <tr>
+      <th>-90.603669</th>
+      <td>-1.885977</td>
+    </tr>
+    <tr>
+      <th>-46.530736</th>
+      <td>-0.564031</td>
+    </tr>
+    <tr>
+      <th>44.409566</th>
+      <td>0.872707</td>
+    </tr>
+    <tr>
+      <th>-26.062077</th>
+      <td>-0.497079</td>
+    </tr>
+    <tr>
+      <th>-21.745357</th>
+      <td>-0.278271</td>
+    </tr>
+    <tr>
+      <th>-15.320394</th>
+      <td>-0.014479</td>
+    </tr>
+    <tr>
+      <th>-23.068392</th>
+      <td>-0.189710</td>
+    </tr>
+    <tr>
+      <th>-26.709089</th>
+      <td>-0.857812</td>
+    </tr>
+    <tr>
+      <th>2.738392</th>
+      <td>-0.261183</td>
+    </tr>
+    <tr>
+      <th>2.096686</th>
+      <td>0.417052</td>
+    </tr>
+    <tr>
+      <th>59.606611</th>
+      <td>1.351731</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-4e542367-4bd8-4c1a-a1d2-df9decb282ef')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-d70d0cfd-52bb-4a3e-bfeb-3c01aa67e6c7')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -519,12 +544,12 @@ berikut:</p>
 
       <script>
         const buttonEl =
-          document.querySelector('#df-4e542367-4bd8-4c1a-a1d2-df9decb282ef button.colab-df-convert');
+          document.querySelector('#df-d70d0cfd-52bb-4a3e-bfeb-3c01aa67e6c7 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-4e542367-4bd8-4c1a-a1d2-df9decb282ef');
+          const element = document.querySelector('#df-d70d0cfd-52bb-4a3e-bfeb-3c01aa67e6c7');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -545,108 +570,69 @@ berikut:</p>
   </div>
 </div></div>
 </div>
-<p>Memisahkan antara fitur dengan label/kategori dengan variable X mengambil 4 kolom dan variable Y mengambil kolom label/kategori</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span> <span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
-<span class="n">Y</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>  
-</pre></div>
-</div>
-</div>
-</div>
-<p>Karena kategorinya berupa numerik maka dilakukan transform dengan label encoder</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span>
-<span class="n">le</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
-<span class="n">Y</span> <span class="o">=</span> <span class="n">le</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Membagi dataTest dan dataTrain</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">Y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Standarisasi</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
-<span class="n">sc</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
-<span class="n">X_train</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
-<span class="n">X_test</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
-<span class="n">classifier</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
-<span class="n">classifier</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="n">reg</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="n">reg</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>GaussianNB()
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9286811615204859
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
-<span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cm</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reg</span><span class="o">.</span><span class="n">coef_</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[16,  0,  0],
-       [ 0, 18,  0],
-       [ 0,  0, 11]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([42.0570917])
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
-<span class="n">y_pred</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="n">le</span><span class="o">.</span><span class="n">classes_</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reg</span><span class="o">.</span><span class="n">intercept_</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.8905635195682908
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">]]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([125.28071158])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pyplot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="n">Y_plot</span> <span class="o">=</span> <span class="n">reg</span><span class="o">.</span><span class="n">coef_</span><span class="o">*</span><span class="n">X_test</span><span class="o">+</span><span class="n">reg</span><span class="o">.</span><span class="n">intercept_</span>
 
-      Setosa       1.00      1.00      1.00        16
-  Versicolor       1.00      1.00      1.00        18
-   Virginica       1.00      1.00      1.00        11
-
-    accuracy                           1.00        45
-   macro avg       1.00      1.00      1.00        45
-weighted avg       1.00      1.00      1.00        45
+<span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">Y_plot</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/notebooks8_7_0.png" src="_images/notebooks8_7_0.png" />
 </div>
 </div>
 </section>
@@ -678,19 +664,12 @@ weighted avg       1.00      1.00      1.00        45
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="notebooks2.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="notebooks7.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">K-NN (Tugas 3)</p>
+            <p class="prev-next-title"><strong>KLASIFIKASI DATA DIABETIC RETINOPATHY</strong></p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="notebooks4.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">K-Means (Tugas 5)</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>
